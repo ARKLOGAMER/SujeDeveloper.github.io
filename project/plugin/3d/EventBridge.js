@@ -1,0 +1,1 @@
+var EventBridge={eventList:{},on:(e,t)=>("string"==typeof e&&"function"==typeof t&&(EventBridge.eventList[e]=t),this),trigger:(e,...arguments)=>{EventBridge.eventList[e]&&EventBridge.eventList[e].apply(this,arguments)}};window.EventBridge=EventBridge;
