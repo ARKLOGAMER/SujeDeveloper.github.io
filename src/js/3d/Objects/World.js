@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import PostersContainer from './PostersContainer';
+import Desk from './Desk';
 
 export default class World {
     constructor(_options) {
@@ -18,24 +18,20 @@ export default class World {
 
     onResReady() {
         this.setLight();
-        this.setPoster();
-    }
-
-    initScroll() {
-        new PosterScroll();
+        this.setDesk();
     }
 
     /**
-     * 项目海报
+     * 桌子
      */
-    setPoster() {
-        this.postersContainer = new PostersContainer({
+     setDesk() {
+        this.desk = new Desk({
             renderer: this.renderer,
             sizes: this.sizes,
             time: this.time,
             resource: this.resource
         })
-        this.container.add(this.postersContainer.container);
+        this.container.add(this.desk.container);
     }
 
 

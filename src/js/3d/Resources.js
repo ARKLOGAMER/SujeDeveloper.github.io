@@ -4,9 +4,10 @@ import Loader from './Utils/Loader.js'
 import EventEmitter from './Utils/EventEmitter.js'
 
 import githubLogoTexture from '../../models/texture/github-logo.png'
-import poster1Texture from '../../models/texture/poster-1.jpg'
-import poster2Texture from '../../models/texture/poster-2.jpg'
-import poster3Texture from '../../models/texture/poster-3.jpg'
+import table from '../../models/glb/table.glb'
+import computer from '../../models/glb/computer.glb'
+import pad from '../../models/glb/pad.glb'
+import wall from '../../models/glb/wall.glb'
 
 export default class Resources extends EventEmitter {
     constructor() {
@@ -18,9 +19,10 @@ export default class Resources extends EventEmitter {
         /************* 预加载资源 **************/
         this.preloadRes = [
             { name: 'githubLogo', source: githubLogoTexture, type: 'texture' },
-            { name: 'poster1', source: poster1Texture, type: 'texture' },
-            { name: 'poster2', source: poster2Texture, type: 'texture' },
-            { name: 'poster3', source: poster3Texture, type: 'texture' },
+            { name: 'table', source: table},
+            { name: 'computer', source: computer},
+            { name: 'pad', source: pad},
+            { name: 'wall', source: wall},
         ];
 
         // 单个资源加载成功
